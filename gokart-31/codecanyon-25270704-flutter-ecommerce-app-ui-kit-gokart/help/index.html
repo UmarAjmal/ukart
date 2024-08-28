@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>GoKart v2.8 - Ecommerce UI in Flutter</title>
+
+	<!-- CSS style -->
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/fontello.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="assets/js/google-code-prettify/prettify.css" />
+
+	<!-- Google web fonts -->
+	<link
+		href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800'
+		rel='stylesheet' type='text/css'>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/globals.js"></script>
+	<script type="text/javascript" src="assets/js/google-code-prettify/prettify.js"></script>
+
+	<style type="text/css">
+		img {
+			max-width: 800px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="logo">GoKart v2.8 - Ecommerce UI in Flutter</div>
+			<div class="slogan">Fabulous UI in Flutter</div>
+		</div>
+	</header>
+
+	<!-- Container -->
+	<div class="container">
+
+		<div class="author">
+			Created: <strong>10/11/2019</strong><br />
+			Last Update: <strong>23/05/2023</strong><br />
+			By: <strong><a href="https://codecanyon.net/user/rendercodetechnology/portfolio"
+					target="_blank">RenderCodeTechnology</a></strong><br />
+			Profile: <strong><a href="https://codecanyon.net/user/rendercodetechnology"
+					target="_blank">www.codecanyon.net.com/user/rendercodetechnology</a></strong><br />
+			E-mail: <strong><a
+					href="mailto:rendercodetechnology@gmail.com">rendercodetechnology@gmail.com</a></strong><br />
+		</div>
+		<p>&nbsp;</p>
+
+		<h2 class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#basic">Basic Information</a></li>
+			<li><a href="#file">Directories & File Uses</a></li>
+			<li><a href="#contact">Contact US</a></li>
+		</ol>
+
+		<hr />
+
+		<h3 id="basic">A) Basic Information</h3>
+
+		<ul>
+			<li><b>Flutter Version</b> - 3.10.1</li>
+			<li><b>Dart Version</b> - 2.23.1</li>
+			<li><b>Install Flutter</b> - Show guide according to your operating system.</li>
+			<ul>
+				<li><b>Windows</b>- <span><a href='https://flutter.dev/docs/get-started/install/windows'
+							target='_blank'>https://flutter.dev/docs/get-started/install/windows</a></span></li>
+				<li><b>macOS</b>- <span><a href='https://flutter.dev/docs/get-started/install/macos'
+							target='_blank'>https://flutter.dev/docs/get-started/install/macos</a></span></li>
+				<li><b>Linux</b>- <span><a href='https://flutter.dev/docs/get-started/install/linux'
+							target='_blank'>https://flutter.dev/docs/get-started/install/linux</a></span></li>
+			</ul>
+			<li><b>Set up an editor</b> - <span><a href='https://flutter.dev/docs/get-started/editor'
+						target='_blank'>https://flutter.dev/docs/get-started/editor</a></span></li>
+			<li><b>Build Our App</b> - Open <b>go_kart</b> folder on your selected IDE (Android Studio or VSCode). Then
+				follow below guide.</li>
+			<ul>
+				<li><a href='https://flutter.dev/docs/get-started/test-drive'
+						target='_blank'>https://flutter.dev/docs/get-started/test-drive</a> <b>Run the App</b> Section
+				</li>
+			</ul>
+		</ul>
+
+		<hr />
+
+		<h3 id="file">B) Directories & File Uses</h3>
+
+		<p>Our Design uses only assets & lib folder. So, don't touch any other folder for ui changes.</p>
+
+		<ul>
+			<ul>
+				<li><b>assets(Folder)</b> - Put all Static images & other data (in Our Case images & json file) in this
+					folder</li>
+				<li><b>lib(Folder)</b> - Main folder that contains all the dart code</li>
+				<ul>
+					<li><b>animation(Folder)</b> - Put all Animation file in This folder</li>
+					<ul>
+						<li><b>fadeIn.dart(File)</b> - Fade in animation file that use in Login & Signup page.</li>
+						<li><b>slide_left_rout.dart(File)</b> - Right to Left Page Rout animation file that use in
+							various page.</li>
+					</ul>
+				</ul>
+				<ul>
+					<li><b>AppTheme(Folder)</b> - Put all Theme file in This folder</li>
+					<ul>
+						<li><b>my_behaviour.dart(File)</b> - Behaviour File of App.</li>
+					</ul>
+				</ul>
+				<ul>
+					<li><b>functions(Folder)</b> - Put all Functions file in This folder</li>
+					<ul>
+						<li><b>passDataToProduct.dart(File)</b> - Pass data to product page function.</li>
+					</ul>
+				</ul>
+				<ul>
+					<li><b>Pages(Folder)</b> - Contain All App Pages in this folder except <b>main.dart</b></li>
+					<ul>
+						<li><b>category(Folder)</b> - Contain All Category related Pages in this folder</li>
+						<ul>
+							<li><b>top_offers_pages(Folder)</b> - Contain All Top Offer Page Element. Like sort & filter
+								row, get grid data, etc.</li>
+							<ul>
+								<li><b>filter_row.dart(Page)</b> - Contain filter row code (Sort & Filter) that show in
+									<b>women_wears.dart</b>.
+								</li>
+								<li><b>get_products.dart(Page)</b> - Get Product Data code that show in
+									<b>women_wears.dart</b>.
+								</li>
+								<li><b>women_wears.dart(Page)</b> - Product page that show all product data that comes
+									from <b>filter_row.dart</b> & <b>get_products.dart</b>.</li>
+							</ul>
+							<li><b>filter.dart(Page)</b> - Filter Page Code in this file.</li>
+							<li><b>top_offers.dart(Page)</b> - Category page that show when user click on category.</li>
+						</ul>
+						<li><b>faq_and_about_app(Folder)</b> - Contain FAQ & About App Page in this folder</li>
+						<ul>
+							<li><b>about_app.dart(Page)</b> - About App Page.</li>
+							<li><b>faq.dart(Page)</b> - FAQ Page.</li>
+						</ul>
+						<li><b>home_page_component(Folder)</b> - Contain All the Component that use in <b>home.dart</b>
+							Page in this folder</li>
+						<ul>
+							<li><b>best_deal.dart(Page)</b> - Contain Code for <b>best deal section</b> of home page.
+							</li>
+							<li><b>best_of_fashion.dart(Page)</b> - Contain Code for <b>best of fashion</b> section of
+								home page.</li>
+							<li><b>best_offer_grid.dart(Page)</b> - Contain Code for <b>best offer</b> section of home
+								page.</li>
+							<li><b>block_buster_deal.dart(Page)</b> - Contain Code for <b>Block Bustor Deal</b> section
+								of home page.</li>
+							<li><b>category_grid.dart(Page)</b> - Contain Code for <b>Category Grid</b> section of home
+								page.</li>
+							<li><b>drawer.dart(Page)</b> - Contain Code for <b>Drawer</b> section of home page.</li>
+							<li><b>featured_brands.dart(Page)</b> - Contain Code for <b>Featured Brands Slider</b>
+								section of home page.</li>
+							<li><b>top_seller_grid.dart(Page)</b> - Contain Code for <b>Top Seller</b> section of home
+								page.</li>
+							<li><b>womens_collection.dart(Page)</b> - Contain Code for <b>Womens Collection</b> section
+								of home page.</li>
+						</ul>
+						<li><b>my_account(Folder)</b> - Contain All the Pages of <b>My Account</b> & <b>Account
+								Setting</b> in this folder</li>
+						<ul>
+							<li><b>account_setting.dart(Page)</b> - Account Setting Page</li>
+							<li><b>my_account.dart(Page)</b> - My Account Page</li>
+						</ul>
+						<li><b>order_payment(Folder)</b> - Contain <b>Delivery Address</b> & <b>Payment</b> in this
+							folder</li>
+						<ul>
+							<li><b>delivery_address.dart(Page)</b> - Delivery Address Page</li>
+							<li><b>payment.dart(Page)</b> - Payment Page</li>
+						</ul>
+						<li><b>product(Folder)</b> - Contain all component & page related product page</li>
+						<ul>
+							<li><b>all_rating.dart(Page)</b> - All rating page</li>
+							<li><b>get_similar_product.dart(Page)</b> - Get similar product and return it to
+								<b>product_details.dart</b>
+							</li>
+							<li><b>product_details.dart(Page)</b> - All component of product page (Like Slider, title,
+								price, size, color, etc.) are in this page and return <b>Scaffold body</b> to
+								<b>product.dart</b>
+							</li>
+							<li><b>product_size.dart(Page)</b> - Product Size & Color Component</li>
+							<li><b>product.dart(Page)</b> - Main Product Page</li>
+							<li><b>rating_row.dart(Page)</b> - Rating row contains product rating and total rating</li>
+						</ul>
+					</ul>
+					<ul>
+						<li><b>cart.dart(Page)</b> - Cart page</li>
+						<li><b>forgot_password.dart(Page)</b> - Forgot Passsword page</li>
+						<li><b>home.dart(Page)</b> - Home Page</li>
+						<li><b>login.dart(Page)</b> - Login page</li>
+						<li><b>my_orders.dart(Page)</b> - My Orders page</li>
+						<li><b>notifications.dart(Page)</b> - My Notification page</li>
+						<li><b>search.dart(Page)</b> - Search page</li>
+						<li><b>signup.dart(Page)</b> - Signup page</li>
+						<li><b>splashscreen.dart(Page)</b> - Splashscreen page</li>
+						<li><b>wishlist.dart(Page)</b> - Wishlist page</li>
+					</ul>
+				</ul>
+				<li><b>main.dart</b> - Entry Point of Our App.</li>
+			</ul>
+		</ul>
+
+		<ul>
+			<li><b>pubspec.yaml(File)</b> - Specification file (All the package and local
+				assets (Like Images, Fonts, etc.) we use in this application is specify in this file.).</li>
+		</ul>
+
+		<hr>
+
+		<h3 id="contact">C) Contact US</h3>
+
+		<p>If you have any kind of problem with this code then please mail us on <span><b><a
+						href="mailto:rendercodetechnology@gmail.com">rendercodetechnology@gmail.com</a></b></span></p>
+
+		<p>If you have any project in flutter then please contact us. We are experiance flutter developer team and build
+			high quality apps for android and ios.</p>
+		<hr>
+
+		<p>Once again, thank you so much for purchasing this item. As I said at the beginning, I'd be glad to help you
+			if you have any questions relating to this item. No guarantees, but I'll do my best to assist. If you have a
+			more general question relating to the application on Codecanyon, you might consider visiting the forums and
+			asking your question in the "Item Discussion" section.</p>
+
+	</div>
+
+	<!-- Social profiles -->
+	<footer>
+		<div class="container" style="color: #FFFFFF;">
+			Feel Free To Contact Us <span><a
+					href="mailto:rendercodetechnology@gmail.com">rendercodetechnology@gmail.com</a></span>
+		</div>
+	</footer>
+
+	<!-- Go to top arrow -->
+	<div class="totop">
+		<div class="gototop">
+			<div class="arrowgototop"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>
